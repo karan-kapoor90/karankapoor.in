@@ -1,0 +1,23 @@
+- name: cd-project
+  descr: "A basic CI repository containing Concourse configuration for a code - image build - git-ops workflow"
+  github: https://github.com/karan-kapoor90/cd-project
+
+- name: kube-resources
+  descr: "A repo containing besic Kubernetes resources to deploy and expose an application. This is the source for a GitOps workflow using ArgoCD"
+  github: https://github.com/karan-kapoor90/kube-resources
+
+- name: docker-workshop
+  descr: "A 101 workshop content for a first hand, beginners guide to working with docker. The complete guide is available in the blogs."
+  github: https://github.com/karan-kapoor90/docker-workshop
+
+- name: PassionatePaprika
+  descr: "A jekyll website hosted on github pages for cooking and recipes website run by my wife and I"
+  website: https://passionatepaprika.com
+
+- name: Gurmehark Styling
+  descr: "My wife's portfolio website built using Angular"
+  website: https://gurmehark.com
+
+- name: tenant-details
+  descr: "A project I'm working on, to create a configuration based mechanism for creating multi-tenant applications sitting on Kubernetes"
+  github: https://github.com/karan-kapoor90/tenant-details

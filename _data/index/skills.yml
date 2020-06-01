@@ -1,0 +1,6 @@
+# skills section data
+
+label: Ability
+id : cs
+aspects: Kubernetes, Microservices, Solution Architecture, Nodejs, Docker, Middleware
+percentage: 90, 75, 80, 75, 70, 80

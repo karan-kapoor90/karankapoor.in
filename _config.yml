@@ -1,0 +1,71 @@
+#
+###################################
+# Site wide configuration
+####################################
+#
+title: karankapoor.in
+email: karan.kapoor.work@gmail.com
+description: Coder, tech enthu-cutlet and evangelist
+url: https://karankapoor.in
+keywords: ["blog"]
+
+#
+###################################
+# Jekyll configuration
+####################################
+#
+timezone:          Asia/Kolkata
+markdown:          kramdown
+highlighter:       rouge
+excerpt_separator: <!--more-->
+permalink:         /articles/:year-:month/:title
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: true
+
+#
+###################################
+# Site Owner configuration
+####################################
+#
+owner:
+  name: karankapoor.in
+  avatar: me.jpg
+  job: "Modern Apps Solution Architect @ VMware"
+  bio: "Coder, tech enthu-cutlet and evangelist"
+  email: karan.kapoor.work@gmail.com
+  disqus-shortname: 
+  twitter: #username
+  facebook: #username
+  google:
+    plus: #username
+    analytics: UA-71953143-1
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: karan-kapoor90
+  gitlab: #username
+  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  linkedin: karankapoor1990
+  skype: #username
+  xing: #username
+  instagram: kapoor_karan
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+  500px: #username
+  codepen: #username
+  reddit: #username
+  telegram: #username

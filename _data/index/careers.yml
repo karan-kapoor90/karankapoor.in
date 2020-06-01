@@ -1,0 +1,16 @@
+# careers section data
+# if you don't have language feature(language.yml is empty), ignore "i18n" items
+- name: VMware
+  link: http://tanzu.vmware.com/
+  date: Feb 2020 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
+  job: Modern Apps Solutions Architect 
+
+- name: Oracle
+  link: http://www.oracle.com/
+  date: Dec 2017 - Feb 2020
+  job: Solutions Engineer
+
+- name: Nile Technologies
+  link: https://www.niletechnologies.com/
+  date: May 2012 - Nov 2017
+  job: Associate Tech Lead
