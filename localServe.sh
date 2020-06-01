@@ -1,2 +1,3 @@
 #!bin/bash
-bundle exec jekyll serve 
+cd /Users/kapoorka/LocalData/apps/karankapoor.in
+bundle exec jekyll serve --drafts
