@@ -19,7 +19,7 @@ Let's face it, when we're doing micro-services, not every service is going to wa
 
 ## Kubernetes
 
-The various mechanisms available in k8s to expose your apps to the outside world, employ services. The particular services that can help you do so would be `NodePort`, `LoadBalancer` or `Ingress`. Read more about the available service types (here)[https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types]. As a summary:
+The various mechanisms available in k8s to expose your apps to the outside world, employ services. The particular services that can help you do so would be `NodePort`, `LoadBalancer` or `Ingress`. Read more about the available service types [here](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types). As a summary:
 
 - `ClusterIP` - This is the default service type in kubernetes. This basically means that the service is allocated an IP address internal to the cluster. This will be used by other services (or pods) deployed on the cluster to talk to the service. This is strictly internal to the cluster, and cannot be seen by consumers outside the cluster.
 
@@ -174,6 +174,6 @@ mydeployment-ing   *       localhost   80      19m
 
 As you can see, the address is `localhost` and the port is `80` -- provided you didn't already have something else running on port 80, in which case this will fail. 
 
-Head over to your browser and open `localhost/banana` to eb greeted by the same service we'd created earlier. 
+Head over to your browser and open `localhost/banana` to be greeted by the same service we'd created earlier. 
 
 Stay tuned for more!
