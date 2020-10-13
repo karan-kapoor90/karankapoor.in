@@ -197,4 +197,7 @@ All in all, once past setting up TBS on your cluster, as a part of a probable fi
 With Tanzu Build Service, say goodbye to writing your Dockerfiles and say hello to automation!
 
 
-The views and opinions expressed in this blog are mine and do not represent VMware (or any associated legal entity/ organization's) view's, thoughts or opinions. The blog is for informational purpose only, and it's contents are made available as-is, without any official binding of SUPPORT and/ or WARRANTIES.
+
+
+
+> The views and opinions expressed in this blog are mine, and do not represent VMware (or any associated legal entity/ organization's) views, thoughts, or opinions. The blog is for informational purpose only, and it's contents are made available as-is, without any official binding of SUPPORT and/ or WARRANTIES.
