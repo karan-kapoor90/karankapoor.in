@@ -2,7 +2,7 @@
 layout: post
 categories: [Tutorials]
 comments: true
-excerpt: Building container images is opinionated, time consuming and mundane. It should be simpler, automated and standardized. 
+excerpt: Making building container images simpler, automated and standardized, in cluster. 
 title: Building Docker Images in cluster - Tanzu Build Service
 tags: [Buildpacks, Tanzu, Tanzu Build Service, Kubernetes]
 description: Building container images is opinionated, time consuming and mundane. It should be simpler, automated and standardized. 
@@ -68,11 +68,11 @@ For more information on how `Cloud Native Buildpacks`, the component in TBS that
 
 8. Here are the links to each Tanzu Network page in which users must accept the EULA:
 
-    - Tanzu Build Service Dependencies
-    - Java Buildpack for VMware Tanzu
-    - Java Native Image Buildpack for VMware Tanzu
-    - Node.js Buildpack for VMware Tanzu
-    - Go Buildpack for VMware Tanzu
+    - [Tanzu Build Service Dependencies](https://network.pivotal.io/products/tbs-dependencies/)
+    - [Java Buildpack for VMware Tanzu](https://network.pivotal.io/products/tanzu-java-buildpack/)
+    - [Java Native Image Buildpack for VMware Tanzu](https://network.pivotal.io/products/tanzu-java-native-image-buildpack)
+    - [Node.js Buildpack for VMware Tanzu](https://network.pivotal.io/products/tanzu-nodejs-buildpack/)
+    - [Go Buildpack for VMware Tanzu](https://network.pivotal.io/products/tanzu-go-buildpack/)
 
 
 ## Install TBS
