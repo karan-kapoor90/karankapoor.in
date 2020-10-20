@@ -196,7 +196,7 @@ All in all, once past setting up TBS on your cluster, as a part of a probable fi
 
 With Tanzu Build Service, say goodbye to writing your Dockerfiles and say hello to automation!
 
-
+    > PS: You're still going to have to write your k8s yaml's so far. ;-) 
 
 
 
