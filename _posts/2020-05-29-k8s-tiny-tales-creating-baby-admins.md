@@ -42,7 +42,7 @@ $ openssl gensra -out john.key 2048
 Then he creates a certificate signing request to share with me.
 
 ```bash 
-$ openssl req -new -key john.key -subj "/CN=john" -o john.csr
+$ openssl req -new -key john.key -subj "/CN=john" -out john.csr
 ```
 
 He then shares the `john.csr` file with me. The `john.key` file is his to keep... his little secret.

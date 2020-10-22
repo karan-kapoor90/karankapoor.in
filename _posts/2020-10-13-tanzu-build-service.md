@@ -6,6 +6,8 @@ excerpt: Making building container images simpler, automated and standardized, i
 title: Building Docker Images in cluster - Tanzu Build Service 1.0
 tags: [Buildpacks, Tanzu, Tanzu Build Service, Kubernetes]
 description: Building container images is opinionated, time consuming and mundane. It should be simpler, automated and standardized. 
+image:
+  feature: tbs1.0.jpg
 ---
 
 
@@ -201,3 +203,4 @@ With Tanzu Build Service, say goodbye to writing your Dockerfiles and say hello 
 
 
 > The views and opinions expressed in this blog are mine, and do not represent VMware (or any associated legal entity/ organization's) views, thoughts, or opinions. The blog is for informational purpose only, and it's contents are made available as-is, without any official binding of SUPPORT and/ or WARRANTIES.
+
