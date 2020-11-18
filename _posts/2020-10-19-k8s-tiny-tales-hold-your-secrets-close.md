@@ -35,7 +35,17 @@ At the time of this writing, there are 3 types of secrets that you can create us
 I like using a nice little tool called `yq` which is like  a `jq` or `sed` for yaml files, that can be used to query through yaml documents rather neatly. You can download it here: [Mike Farah's yq github repo](https://github.com/mikefarah/yq)
 
 
-### Common bit - Finding what you're looking for
+### Common Step - Finding what you're looking for
+
+Create a secret as follows:
+
+```bash
+$ kubectl create secret generic my-random-password --from-literal=username=test --from-literal=password=test    # a generic type secret maybe used to call a DB or a SaaS app etc. 
+$ kubectl create secret docker-registry my-pvt-reg-creds --docker-username=admin --docker--password=password --docker-server=https://my-registry.com    # Credentials to a potentially private image repository
+
+```
+
+Once that's out of the way, you can list and get some basic info about the secrets you created as follows:
 
 ```bash
 $ kubectl get secrets       # Lists all secrets
@@ -87,7 +97,9 @@ ObviouslyNotMyPassword      # Output
 ```
 
 
-### 2. Using yq and decoding
+### 2. Using with or without yq and decoding
+
+#### With `yq`
 
 ```bash
 $ kubectl get secret github-creds -o yaml | yq r - data.username | base64 --decode
@@ -97,6 +109,14 @@ $ kubectl get secret github-creds -o yaml | yq r - data.password | base64 --deco
 ObviouslyNotMyPassword      # Output
 ```
 
+#### Without yq
+
+```bash
+$ kubectl get secret github-creds -o="jsonpath={.data.username}" | base64 --decode
+
+```
+
+> A secret of type docker-registry has a key called `.dockerconfigjson` including the preceding `.`. In order to use the aforementioned command without yq to work, you must escape the `.` as such: `kubectl get secret github-creds -o="jsonpath={.data.\.dockerconfigjson}" | base64 --decode`
 
 ### 3. Consuming inside another pod
 

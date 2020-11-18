@@ -79,7 +79,7 @@ spec:
   - digital signature
   groups:
   - system:authenticated
-  requests: #base64 value of john.csr - simply pasted here
+  request: #base64 value of john.csr - simply pasted here
 ```
 
 Apply this yaml to your cluster. This is not a namespaced object so it doesn't matter which namespace you're applying this file into.
