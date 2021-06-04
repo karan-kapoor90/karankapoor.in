@@ -2,7 +2,7 @@
 layout: post
 categories: [Tutorials, Security]
 comments: true
-excerpt: A simple guide 
+excerpt: A simple guide to setup your own local Certificate Authority for development
 title: Setting up a local Certificate Authority
 tags: [mkcert, beginners, security, certificate]
 description: When setting up platforms and systems, one often needs to supply signed certificates for domains, systems and services.
