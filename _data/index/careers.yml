@@ -1,8 +1,13 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
+- name: Google
+  link: https://cloud.google.com/solutions/application-modernization
+  date: Jun 2021 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
+  job: Application Modernization Specialist 
+
 - name: VMware
   link: http://tanzu.vmware.com/
-  date: Feb 2020 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
+  date: Feb 2020 - Jun 2021
   job: Modern Apps Solutions Architect 
 
 - name: Oracle
