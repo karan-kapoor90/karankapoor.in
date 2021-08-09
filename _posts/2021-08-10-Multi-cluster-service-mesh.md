@@ -7,7 +7,7 @@ title: Multi-cluster Service Mesh using ASM
 tags: [kubernetes, GCP, Anthos]
 description: A guide to setup Anthos Service Mesh in the most simplistic manner across multiple kubernetes clusters deployed in different geographic regions around the world.
 image:
-  feature: anthos-service-mesh.png
+  feature: anthos-service-mesh.jpeg 
 ---
 
 > This blog is Part 2 of [Multi-region Cluster LoadBalancing using GKE](https://karankapoor.in/articles/Multi-region-cluster-loadbalancing). The 2 blogs share the same Setup.
