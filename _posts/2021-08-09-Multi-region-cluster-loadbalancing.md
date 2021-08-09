@@ -26,6 +26,7 @@ The objective is create a service mesh using multiple kubernetes clusters distri
 Scenario's 1 and 2 can be accomplished using a Multi-cluster Ingress setup on GKE. Scenario 3 requires the use of Anthos Service mesh deployed across both the workload clusters. We need to meet the following Objectives:
 
 **Objective 1** - Setup multi-cluster ingress that uses a Global LB for load balancing and can do intelligent routing
+
 **Objective 2** - Setup multi-cluster mesh using ASM
 
 
