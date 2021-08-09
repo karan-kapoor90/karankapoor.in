@@ -343,7 +343,7 @@ In order for Global Load Balancing to work, GCP can provide us with a random Sta
 12. Validating - Test the services from different regions using your local broswer as well as https://geotargetly.com/geo-browse 
 
 
-And Voila.. Post for Objective 2 coming soon...
+And Voila.. Post for Objective 2 coming soon... The same setup is used for this second part as well.
 
 
 PS: Any thoughts or opinions expressed in this blog are solely mine and have no relation to Google's thoughts or point of views. 

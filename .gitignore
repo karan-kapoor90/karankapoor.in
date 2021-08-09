@@ -4,3 +4,5 @@ _site
 Thumbs.db
 .ruby-version
 Gemfile.lock
+vendor
+.bundle
