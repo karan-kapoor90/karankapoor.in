@@ -12,10 +12,10 @@ image:
 
 # Objectives
 
-Take a deep breath, you're going to need it! This is going to be long, but not difficult. Follow along, and you should be just... fine :-)
+Take a deep breath, you're going to need it! This is going to be long, but not difficult. Follow along, and you should be just... fine :-) 
 
 
-> The following guide has been tested on Google CloudShell and may not work happily on Windows or Mac. Cloud Shell is FREE, so there really isn't any good reason to not use it ;)
+> The following guide has been tested on Google CloudShell and may not work happily on Windows or Mac. Cloud Shell is FREE, so there really isn't any good reason to not use it.
 
 The objective is create a service mesh using multiple kubernetes clusters distributed around the globe, to host services for customers to consume. Here are a couple of things that should happen:
 
