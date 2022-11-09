@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/sh
 cd /Users/kapoorka/LocalData/apps/karankapoor.in
-bundle exec jekyll serve --drafts --livereload
+bundle exec jekyll serve --livereload
 open http://localhost:4000
