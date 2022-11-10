@@ -59,7 +59,13 @@ export TENANT_NAME=tenant-1
  
 # Creating GKE cluster
  
-Leveraging workload identity on the GKE cluster enables the comms b/w the Git repo on GCP using a service account instead of tokens or ssh keys and is hence the recommended way of doing it. Basically, instead of creating a secret on the GKE level and using that to enable connectivity b/w the cluster worker nodes and the Source Repo, the service account on the worker node gives the worker node, service account level access to allow the node to talk to the source repo.
+Leveraging workload identity on the GKE cluster enables communication b/w the Git repository on GCP using a service account instead of tokens or ssh keys, and is hence the recommended way of doing it. Let's try and simplify this.
+
+- Normally, in order for the GKE cluster to speak to another service that requires authentication, you'd normally need to import the credentials into the cluster as a kubernetes secret.
+
+- With workload identity, you first create a service account on Google cloud identity, and give it permissions to access the other service (for example Cloud Build, Cloud SQL etc.), then create a service account inside the kubernetes cluster and give it the appropriate kubernetes roles, and then link the googler service account to the kubernetes service account you created. As a result, all resources leveraging the kubernetes service account we created earlier, get the same access permissions as the google cloud service account we created earlier.
+
+In order to configure access using service accounts as mentioned above, a capability on the GKE cluster needs to be enabled first. This capability is called Workload Identity, and it  greatly simplifies Authentication and Authorization between GKE and other google cloud services. 
  
 - Create a regular public GKE cluster but ideally with Workload identity enabled on the GKE cluster and the GKE Metadata server on the worker node pool.
     ```bash
@@ -72,6 +78,16 @@ Leveraging workload identity on the GKE cluster enables the comms b/w the Git re
     gcloud container clusters update $CLUSTER_NAME \
     --region=$COMPUTE_REGION \
     --workload-pool=$PROJECT_ID.svc.id.goog
+    ```
+
+    You would then have to figure out the name of the nodepool in the cluster where you're attempting to enable workload identity. The following command will enable worklopad identity on the nodepool, however when this happens, the nodes in the node pool will stop using the default compute service account, which could cause disruption to existing workloads.
+
+    > The simplest way to get the name of the nodepool is to navigate to the GKE cluster on the GCP UI, click on the name of the Cluster --> Nodes, and copy the name of the nodepool from there. 
+
+    ```bash
+    gcloud container node-pools update NODEPOOL_NAME \
+    --cluster=$CLUSTER_NAME \
+    --workload-metadata=GKE_METADATA
     ```
 
 In your cloud shell (we're assuming you're using it for the purpose of this demo), get access to the kubernetes cluster you just created using the following command:
@@ -323,8 +339,8 @@ We now intend to add a tenant to the cluster and the git repository to be synced
  
 # References
  
-    Doc Reference: https://cloud.google.com/anthos-config-management/docs/how-to/installing-config-sync
-    Multi-repo sync: https://cloud.google.com/anthos-config-management/docs/config-sync-quickstart
-    Multi-repo documentation: https://cloud.google.com/anthos-config-management/docs/how-to/multiple-repositories
-    Repo types in ACM: https://cloud.google.com/anthos-config-management/docs/config-sync-overview#repositories
-    Root-sync resource ref documentation: https://cloud.google.com/anthos-config-management/docs/reference/rootsync-reposync-fields#configuring-source-type 
+    Doc Reference: [How to install Anthos Config Management](https://cloud.google.com/anthos-config-management/docs/how-to/installing-config-sync)
+    Multi-repo sync: [Getting started with Anthos Config Management - Config Sync](https://cloud.google.com/anthos-config-management/docs/config-sync-quickstart)
+    Multi-repo documentation: [Anthos Config Management - multi-repo sync](https://cloud.google.com/anthos-config-management/docs/how-to/multiple-repositories)
+    Repo types in ACM: [Anthos Config Management - repository types](https://cloud.google.com/anthos-config-management/docs/config-sync-overview#repositories)
+    Root-sync resource ref documentation: [Root-sync object reference document](https://cloud.google.com/anthos-config-management/docs/reference/rootsync-reposync-fields#configuring-source-type)
