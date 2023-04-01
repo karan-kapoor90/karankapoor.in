@@ -90,7 +90,7 @@ chmod +x hey_linux_amd64
 
 ```bash
 sudo apt update
-sudp apt install apache2-utils -y
+sudo apt install apache2-utils -y
 ab -n 1000 -c 10 http://<>  // Will make 1000 requests 10 at a time to your app
 ```
 
@@ -232,4 +232,12 @@ Check images in GAR using:
 
 ```bash
 gcloud artifacts docker images list $REGION-docker.pkg.dev/$PROJECT_ID/web-app --include-tags --format=yaml
+```
+
+## Build images using pack without a Dockerfile
+
+Run this in the project root such as the nodejs app folder where the package.json file is present.
+
+```bash
+gcloud builds submit --pack image=us-central1-docker.pkg.dev/$PROJECT/helloworld-repo/helloworld
 ```
